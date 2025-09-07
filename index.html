@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-blue">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Social Media – Home</title>
+  <style>
+    /* -------- Theme Colors -------- */
+    :root { --brand: #2563eb; --brand-600: #1d4ed8; --bg: #0b1220; --text: #0f172a; --muted: #475569; --card: #ffffff; }
+  
+    /* -------- Base Reset -------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; color: var(--text); background:#f8fafc; }
+    a { color: inherit; text-decoration: none; }
+    ul { padding-left: 1.2rem; }
+
+    /* -------- Layout Helpers -------- */
+    .container { width: min(1100px, 92vw); margin-inline: auto; }
+    .grid { display:grid; gap:1.2rem; }
+    .grid.two { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card { background: var(--card); border: 1px solid #e2e8f0; border-radius: 16px; padding: 1rem 1.2rem; box-shadow: 0 10px 24px rgba(2,6,23,0.05); }
+    .badge { display:inline-block; padding:.25rem .6rem; border-radius:999px; font-size:.8rem; font-weight:600; background: rgba(37,99,235,.12); color: var(--brand-600); border:1px solid rgba(37,99,235,.2); }
+
+    /* -------- Navbar -------- */
+    .navbar { position: sticky; top:0; z-index:50; background: var(--brand); color: #fff; box-shadow: 0 8px 24px rgba(2,6,23,0.2); }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; padding: .8rem 0; gap: .8rem; }
+    .brand { display:flex; align-items:center; gap:.6rem; font-weight:800; letter-spacing:.2px; }
+    .logo { width:34px; height:34px; border-radius:10px; background: #fff; color: var(--brand); display:grid; place-items:center; font-weight:900; }
+
+    .navlinks { display:flex; align-items:center; gap:.2rem; flex-wrap: wrap; }
+    .navlinks a { padding:.55rem .8rem; border-radius:12px; font-weight:600; opacity:.95; }
+    .navlinks a:hover { background: rgba(255,255,255,.18); }
+
+    .theme-switch { display:flex; align-items:center; gap:.4rem; background: rgba(255,255,255,.16); padding:.35rem; border-radius:12px; }
+    .swatch { width:22px; height:22px; border-radius:8px; border:2px solid rgba(255,255,255,.7); cursor:pointer; display:inline-block; }
+    .swatch.blue { background:#2563eb; }
+    .swatch.purple { background:#7c3aed; }
+    .swatch.pink { background:#db2777; }
+
+    /* -------- Hero -------- */
+    .hero { background: linear-gradient(180deg, rgba(2,6,23,0) 0%, rgba(2,6,23,.06) 100%); padding: 2.2rem 0 1.6rem; }
+    .hero h1 { font-size: clamp(1.6rem, 2.6vw + 1rem, 2.6rem); margin:0; }
+    .hero p { color:#334155; margin:.6rem 0 0; }
+
+    /* -------- Sections -------- */
+    section { scroll-margin-top: 88px; }
+    section h2 { margin:.2rem 0 0.6rem; font-size:1.35rem; }
+    .section-head { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .section-head .badge { background: rgba(37,99,235,.1); border-color: rgba(37,99,235,.25); }
+
+    /* -------- Footer -------- */
+    footer { margin-top: 2rem; padding: 1.2rem 0 2rem; color:#475569; text-align:center; }
+
+    /* -------- Responsive tweaks -------- */
+    @media (max-width: 640px){
+      .navlinks { gap:.1rem; }
+      .navlinks a { padding:.5rem .6rem; }
+      .brand span { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">
+        <div class="logo">SM</div>
+        <span>Social Media Hub</span>
+      </a>
+
+      <div class="navlinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#help">Help</a>
+        <a href="#career">Career Opportunities</a>
+        <a href="#shopping">Online Shopping</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+
+      <div class="theme-switch" title="Switch navbar color">
+        <span class="swatch blue"   onclick="setTheme('theme-blue')"   aria-label="Blue theme"></span>
+        <span class="swatch purple" onclick="setTheme('theme-purple')" aria-label="Purple theme"></span>
+        <span class="swatch pink"   onclick="setTheme('theme-pink')"   aria-label="Pink theme"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header class="hero" id="home">
+    <div class="container grid">
+      <div class="card" style="padding:1.2rem 1.4rem;">
+        <span class="badge">Welcome</span>
+        <h1>Explore Social Media: Skills, Pros & Cons, and Real Impact</h1>
+        <p>Quick overview page with clean sections for your assignment or website. Use the navbar to jump to any topic, and switch the color to Blue, Purple, or Pink.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container grid" style="margin-top:1rem;">
+    <!-- 1. Introduction -->
+    <section id="introduction" class="card">
+      <div class="section-head">
+        <h2>1) Introduction</h2>
+        <span class="badge">Overview</span>
+      </div>
+      <p>Social media platforms enable people to create, share, and discover content in real time. They influence communication, business, education, and culture by connecting users across the world at low cost and high speed.</p>
+      <ul>
+        <li>Examples: Instagram, X (Twitter), Facebook, LinkedIn, YouTube.</li>
+        <li>Core actions: posting, commenting, messaging, live streaming, communities.</li>
+        <li>Key trends: short‑form video, creator economy, social commerce, AI moderation.</li>
+      </ul>
+    </section>
+
+    <!-- 2. Social Media Skills -->
+    <section id="skills" class="card">
+      <div class="section-head">
+        <h2>2) Social Media Skills</h2>
+        <span class="badge">Skills</span>
+      </div>
+      <ul>
+        <li><strong>Content Creation:</strong> Copywriting, basic design, video editing.</li>
+        <li><strong>Platform Strategy:</strong> Understanding algorithms, timing, hashtags.</li>
+        <li><strong>Community Management:</strong> Engaging replies, moderation, feedback.</li>
+        <li><strong>Analytics:</strong> Reading insights (reach, CTR, watch time) to iterate.</li>
+        <li><strong>Brand & Ethics:</strong> Tone, attribution, privacy, and authentic voice.</li>
+      </ul>
+    </section>
+
+    <!-- 3. Advantages -->
+    <section id="advantages" class="card">
+      <div class="section-head">
+        <h2>3) Advantages</h2>
+        <span class="badge">Pros</span>
+      </div>
+      <ul>
+        <li>Instant communication and global networking.</li>
+        <li>Learning resources and knowledge sharing.</li>
+        <li>Marketing reach for careers, startups, and creators.</li>
+        <li>Community support around shared interests.</li>
+        <li>Real‑time news and event discovery.</li>
+      </ul>
+    </section>
+
+    <!-- 4. Disadvantages -->
+    <section id="disadvantages" class="card">
+      <div class="section-head">
+        <h2>4) Disadvantages</h2>
+        <span class="badge">Cons</span>
+      </div>
+      <ul>
+        <li>Distraction and time overuse; productivity loss.</li>
+        <li>Misinformation and echo chambers.</li>
+        <li>Privacy risks and data security concerns.</li>
+        <li>Cyberbullying, harassment, and mental‑health impact.</li>
+        <li>Comparison culture leading to low self‑esteem.</li>
+      </ul>
+    </section>
+
+    <!-- 5. Positive Effects of Social Media -->
+    <section id="positive-effects" class="card">
+      <div class="section-head">
+        <h2>5) Positive Effects of Social Media</h2>
+        <span class="badge">Impact</span>
+      </div>
+      <ul>
+        <li>Amplifies social causes and disaster relief efforts.</li>
+        <li>Builds professional networks and job visibility.</li>
+        <li>Encourages creativity, collaboration, and peer learning.</li>
+        <li>Enables small businesses through low‑cost promotion.</li>
+        <li>Offers emotional support communities.</li>
+      </ul>
+    </section>
+
+    <!-- ===== Additional pages linked in the navbar ===== -->
+    <section id="about" class="card">
+      <div class="section-head">
+        <h2>About</h2>
+        <span class="badge">Info</span>
+      </div>
+      <p>This site is a simple, clean layout demonstrating key social media topics. You can reuse this structure for school projects or personal websites.</p>
+    </section>
+
+    <section id="help" class="card">
+      <div class="section-head">
+        <h2>Help</h2>
+        <span class="badge">Support</span>
+      </div>
+      <p>Need assistance? Check FAQs, platform guidelines, and safety settings. Remember to enable 2‑factor authentication and review privacy controls on each platform.</p>
+    </section>
+
+    <section id="career" class="card">
+      <div class="section-head">
+        <h2>Career Opportunities</h2>
+        <span class="badge">Jobs</span>
+      </div>
+      <ul>
+        <li>Social Media Manager / Strategist</li>
+        <li>Content Creator / Video Editor</li>
+        <li>Community Manager / Moderator</li>
+        <li>Performance Marketer / Analyst</li>
+        <li>Brand Partnerships / Creator Success</li>
+      </ul>
+    </section>
+
+    <section id="shopping" class="card">
+      <div class="section-head">
+        <h2>Online Shopping</h2>
+        <span class="badge">Commerce</span>
+      </div>
+      <p>Social commerce blends content and checkout. Consider ethical ads, verified sellers, and buyer protection policies.</p>
+    </section>
+
+    <section id="contact" class="card">
+      <div class="section-head">
+        <h2>Contact Us</h2>
+        <span class="badge">Reach Out</span>
+      </div>
+      <p>Email: hello@example.com · Phone: +91 XXXXXXXXXX</p>
+      <p>Or drop a message via the form below:</p>
+      <form onsubmit="event.preventDefault(); alert('Thanks! We will reply soon.');" class="grid">
+        <div class="grid two">
+          <div class="card" style="padding: .6rem;">
+            <label for="name">Name</label>
+            <input id="name" required placeholder="Your name" style="width:100%;padding:.6rem .7rem;border-radius:12px;border:1px solid #cbd5e1;" />
+          </div>
+          <div class="card" style="padding: .6rem;">
+            <label for="email">Email</label>
+            <input id="email" type="email" required placeholder="you@example.com" style="width:100%;padding:.6rem .7rem;border-radius:12px;border:1px solid #cbd5e1;" />
+          </div>
+        </div>
+        <div class="card" style="padding: .6rem;">
+          <label for="msg">Message</label>
+          <textarea id="msg" rows="4" required placeholder="Type your message..." style="width:100%;padding:.6rem .7rem;border-radius:12px;border:1px solid #cbd5e1;resize:vertical;"></textarea>
+        </div>
+        <button type="submit" style="align-self:start;background:var(--brand);color:#fff;border:none;padding:.7rem 1rem;border-radius:12px;font-weight:700;cursor:pointer;">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container">
+    © <span id="year"></span> Social Media Hub · Built with ♥
+  </footer>
+
+  <script>
+    function setTheme(theme){
+      document.documentElement.classList.remove('theme-blue','theme-purple','theme-pink');
+      document.documentElement.classList.add(theme);
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
